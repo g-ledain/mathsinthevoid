@@ -53,4 +53,4 @@ This formulation of the theorem has a very nice eye-catching moral: Note that a 
 
 Note that a similar moral holds for linear $G$-representations, especially in the semisimple case (e.g. when $G$ is finite and the ground field $k$ is algebraically closed of characteristic zero); in this case, every representation is a direct sum (not disjoint union) of simples (not orbits) and every simple $G$-representation appears as a quotient (and summand, by semisimplicity) of $kG$. In fact, a nice perspective on semisimplicity might be that it allows us to emulate as closely as possible the case of $G$ acting on a mere set, rather than a vector space.
 
-[^overstatement] This is really an overstatement - in practice, it may not be so easy to apply this knowledge to specific $G$-sets $X$. But at least for theoretical and spiritual purposes, this is a good lesson to bear in mind.
+[^overstatement]: This is really an overstatement - in practice, it may not be so easy to apply this knowledge to specific $G$-sets $X$. But at least for theoretical and spiritual purposes, this is a good lesson to bear in mind.
