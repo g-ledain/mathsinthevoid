@@ -1,12 +1,14 @@
 # Basic definitions and facts
 
+I never fully appreciated the orbit-stabiliser theorem at university. Since then I've come to appreciate it as a consequence of one of my favourite theorems: the first isomorphism theorem, in all its guises.
+
 ## Definitions: Orbit, stabiliser, fixed-point
 Let $G$ be a group acting on a set $X$. We define
  - The orbit of $x \in X$, written $G.x$ or $\textrm{Orb}(x)$, as $\{g.x: g\in G\}$
  - The stabiliser of $x \in X$, written $G_x$ or $\textrm{Stab}(x)$, as $\{g \in G: g.x=x\}$
  - The fixed-points of $g$, written $X^g$ or $\textrm{Fix}(g)$, as $\{x\in X: g.x=x\}$
 
-All three notiond extend in the obvious way to subsets of $X$, $G$. We then have a Galois connection between fixed-points and stabilisers. 
+All three notions extend in the obvious way to subsets of $X$, $G$. We then have a Galois connection between fixed-points and stabilisers. 
 
 Let $\rho: G\times X \to X$ denote the action. Letting $G$ act on $G\times X$ by $h.(g,x) = (hg,x)$, we see that $\rho$ is a map of $G$-sets! Fixing some $x\in X$ gives a map of $G$-sets
 
@@ -30,7 +32,7 @@ For $x,y \in X, S \subseteq X$ and $g \in G$, we have
 Proof: exercise
 
 ## Theorem: Orbit-Stabiliser theorem (first formulation)
-Let $G$ be a group acting on a set $X$ via an action $\rho: G\times X \to X$ and fix $x\in X$. Then the sets $$\{\rho_x^{-1}(\{y\}) $$ are equinumerous and partition $G$.
+Let $G$ be a group acting on a set $X$ via an action $\rho: G\times X \to X$ and fix $x\in X$. Then the sets $$\{\rho_x^{-1}(\{y\})\} $$ are equinumerous and partition $G$.
 In particular, when $G$ and $X$ are finite, we have for any $x\in X$ that $$|\textrm{Orb}(x)| |\textrm{Stab}(x)| =|G| $$
 
 Proof: 
@@ -49,6 +51,6 @@ Thus, the orbit-stabiliser theorem is exactly Lagrange's theorem "pushed through
 
 This formulation of the theorem has a very nice eye-catching moral: Note that a $G$-set $X$ is always the disjoint union of its orbits, so we can understand the action of $G$ on $X$ by understanding the action of $G$ on each of the orbits separately. But by orbit-stabiliser, each orbit is isomorphic as a $G$-set to the left-multiplication action og $G$ on $G/H$ for some $H\leq G$. So the category of $G$-sets can be understood completely by understanding how $G$ acts on itself![^overstatement].
 
-Note that a similar moral holds for linear $G$-representations, especially in the semisimple case (e.g. when $G$ is finite and the ground field $k$ is algebraically closed of characteristic zero); in this case, every representation is a direct sum (not disjoint union) of simples (not orbits) and every simple $G$-representation appears as a quotient (and summand, by semsimplicity) of $kG$. In fact, a nice perspective on semisimplicity might be that it allows us to emulate as closely as possible the case of $G$ acting on a mere set, rather than a vector space.
+Note that a similar moral holds for linear $G$-representations, especially in the semisimple case (e.g. when $G$ is finite and the ground field $k$ is algebraically closed of characteristic zero); in this case, every representation is a direct sum (not disjoint union) of simples (not orbits) and every simple $G$-representation appears as a quotient (and summand, by semisimplicity) of $kG$. In fact, a nice perspective on semisimplicity might be that it allows us to emulate as closely as possible the case of $G$ acting on a mere set, rather than a vector space.
 
 [^overstatement] This is really an overstatement - in practice, it may not be so easy to apply this knowledge to specific $G$-sets $X$. But at least for theoretical and spiritual purposes, this is a good lesson to bear in mind.
