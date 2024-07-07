@@ -12,7 +12,7 @@ All three notions extend in the obvious way to subsets of $X$, $G$. We then have
 
 Let $\rho: G\times X \to X$ denote the action. Letting $G$ act on $G\times X$ by $h.(g,x) = (hg,x)$, we see that $\rho$ is a map of $G$-sets! Fixing some $x\in X$ gives a map of $G$-sets
 
-$$\rho_x: G \to X $$
+$$ \rho_x: G \to X $$
 $$g \mapsto g.x $$
 
 with image $G.x$, hence a map $\rho_x: G \twoheadrightarrow G.x$.
