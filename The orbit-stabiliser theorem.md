@@ -18,9 +18,9 @@ $$g \mapsto g.x $$
 with image $G.x$, hence a map $\rho_x: G \twoheadrightarrow G.x$.
 
 We have 
-$$ \rho_x^{-1}(\{y\}) = \{g\in G: g.x=y\} $$
+$$\rho_x^{-1}(\{y\}) = \{g\in G: g.x=y\}$$
 and hence in particular:
-$$ \rho_x^{-1}(\{x\}) = \textrm{Stab}(x) $$
+$$\rho_x^{-1}(\{x\}) = \textrm{Stab}(x)$$
 
 ## Proposition:
 For $x,y \in X, S \subseteq X$ and $g \in G$, we have 
