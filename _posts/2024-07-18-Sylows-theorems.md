@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sylow's theorems"
-date:   2024-07-17 00:00:00 +0100
+date:   2024-08-04 00:00:00 +0100
 categories: 
 ---
 
@@ -118,12 +118,12 @@ Since <span>$G$</span> acts transitively on the Sylow subgroups, and the stabili
 # Sylow III
 
 *Theorem: Sylow III*\
-We have <span>$n_p \cong 1 \text{ mod } p$</span>. Consequently <span>$p | u$</span>, where <span>$|G|=p^nu$</span> and <span>$p\not |u$</span>. 
+We have <span>$n_p \cong 1 \text{ mod } p$</span>[^fanciful]. Consequently <span>$p | u$</span>, where <span>$|G|=p^nu$</span> and <span>$p\not |u$</span>. 
 
 Unlike the first two Sylow theorems, I only know essentially one way to prove the third Sylow theorem, which is to consider the conjugation action of a fixed Sylow subgroup on the set of Sylow subgroups. One then shows the following fact:
 
 *Important lemma:*\
-Let <span>$G$</span> be a finite group and <span>$\textrm{Syl}_p = \{ P_1,\ldots,P_m \}$</span> be the set of its Sylow subgroups. Then the orbits of <span>$\textrm{Syl}_p$</span> under the conjugation action by <span>$P_i$</span> are exactly <span>$\{P_i\}$</span> and a collection of orbits with order divisible by <span>$p$</span>. Hence <span>$\textrm{Orb}_G(P_i)  \equiv  1 \text{ mod } p$</span>.
+Let <span>$G$</span> be a finite group and <span>$\textrm{Syl}_p = \{ P_1,\ldots,P_m \}$</span> be the set of its Sylow subgroups. Then the orbits of <span>$\textrm{Syl}_p$</span> under the conjugation action by <span>$P_i$</span> are exactly <span>$\{P_i\}$</span> and a collection of orbits each of which has order divisible by <span>$p$</span>. Hence <span>$\textrm{Orb}_G(P_i)  \equiv  1 \text{ mod } p$</span>.
 
 Notice for example that once one has the transitivity of the action of <span>$G$</span> on <span>$\textrm{Syl}_p$</span> (i.e. Sylow II), then Sylow III immediately follows. In essence, this is a 'decategorification' to the level of sets of the congrucence <span>$n_p \equiv 1 \text{ mod } p$</span>.
 
@@ -152,7 +152,7 @@ be the stabiliser of <span>$P_j$</span> under the <span>$P_i$</span>-conjugation
 
 *Proof of irksome lemma:*\
 Evidently <span>$K_{ij}\in P_i$</span> and <span>$P_i\cap P_j \subseteq K_{ij}$</span>, so we just need to show that <span>$K_{ij}\subseteq P_j$</span>. Recall that for two subgroups <span>$A$</span>,<span>$B$</span> the subset <span>$AB$</span> is a subgroup iff <span>$AB=BA$</span>. But by construction <span>$P_jK_{ij} = K_{ij}P_j$</span> so <span>$P_j K_{ij}$</span> is a subgroup. Evidently <span>$P_j$</span> is normal in <span>$K_{ij}$</span>.
-Now by the second isomorphism theorem
+Now by the second isomorphism theorem[^second]
 <div>$$ \frac{K_{ij}P_j}{P_j}\cong \frac{K_{ij}}{K_{ij}\cap P_j}$$</div>
 so <span>$|K_{ij}P_j| = |P_j||K_{ij}||K_{ij}\cap P_j|$</span>. But every groups on the right hand side is a subgroup of a Sylow subgroup, so <span>$K_{ij}P_j$</span> has <span>$p$</span>-power order. But <span>$P_j \subseteq K_{ij}P_j$</span> and <span>$P_j$</span> has maximal <span>$p$</span>-power order so <span>$P_{ij} = K_{ij}P_j$</span> so <span>$K_{ij} \subseteq P_j$</span>.
 
@@ -192,3 +192,7 @@ It would be interesting to try to extend the orbit-decomposition argument that w
 [^irksome]: Perhaps I am too unkind to the lemma; its statement is perfectly pleasant and it is a good fact to know. However, the proof leaves something to be desired.
 
 [^same]: You will sometimes see versions of this argument which invoke the <span>$p$</span>-group fixed-point lemma, but they're really the same argument.
+
+[^second]: On the face of it, we are not invoking the second isomorphism as it is usually stated here: usually we have a group <span>$G$</span>, a subgroup <span>$H$</span> and a subgroup <span>$N$</span> which we *know* is normal. Then the theorem *concludes* that <span>$NH$</span> is a subgroup and that <span>$N$</span> is normal in <span>$NH$</span>. Here we instead strengthen the assumptions to include that <span>$NH$</span> is a group and <span>$N$</span> is normal in <span>$NH$</span> and get the same result (by the same argument). Alternatively, we can in fact get our result by an application of the second isomorphism theorem as typically stated so long as we choose <span>$N_G(P)$</span> as our "ambient" group. 
+
+[^fanciful]: Fancifully, we might say that Sylow subgroups are "unique mod <span>$p$</span>", or that the prime <span>$p$</span> "thinks there is a unique Sylow subgroup".

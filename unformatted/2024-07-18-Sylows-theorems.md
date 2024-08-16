@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sylow's theorems"
-date:   2024-07-17 00:00:00 +0100
+date:   2024-08-04 00:00:00 +0100
 categories: 
 ---
 
@@ -118,12 +118,12 @@ $$n_p =  |G/N_G(P)|$$
 # Sylow III
 
 *Theorem: Sylow III*\
-We have $n_p \cong 1 \text{ mod } p$. Consequently $p | u$, where $|G|=p^nu$ and $p\not |u$. 
+We have $n_p \cong 1 \text{ mod } p$[^fanciful]. Consequently $p | u$, where $|G|=p^nu$ and $p\not |u$. 
 
 Unlike the first two Sylow theorems, I only know essentially one way to prove the third Sylow theorem, which is to consider the conjugation action of a fixed Sylow subgroup on the set of Sylow subgroups. One then shows the following fact:
 
 *Important lemma:*\
-Let $G$ be a finite group and $\textrm{Syl}_p = \{ P_1,\ldots,P_m \}$ be the set of its Sylow subgroups. Then the orbits of $\textrm{Syl}_p$ under the conjugation action by $P_i$ are exactly $\{P_i\}$ and a collection of orbits with order divisible by $p$. Hence $\textrm{Orb}_G(P_i)  \equiv  1 \text{ mod } p$.
+Let $G$ be a finite group and $\textrm{Syl}_p = \{ P_1,\ldots,P_m \}$ be the set of its Sylow subgroups. Then the orbits of $\textrm{Syl}_p$ under the conjugation action by $P_i$ are exactly $\{P_i\}$ and a collection of orbits each of which has order divisible by $p$. Hence $\textrm{Orb}_G(P_i)  \equiv  1 \text{ mod } p$.
 
 Notice for example that once one has the transitivity of the action of $G$ on $\textrm{Syl}_p$ (i.e. Sylow II), then Sylow III immediately follows. In essence, this is a 'decategorification' to the level of sets of the congrucence $n_p \equiv 1 \text{ mod } p$.
 
@@ -152,7 +152,7 @@ $$K_{ij} = P_i\cap P_j $$
 
 *Proof of irksome lemma:*\
 Evidently $K_{ij}\in P_i$ and $P_i\cap P_j \subseteq K_{ij}$, so we just need to show that $K_{ij}\subseteq P_j$. Recall that for two subgroups $A$,$B$ the subset $AB$ is a subgroup iff $AB=BA$. But by construction $P_jK_{ij} = K_{ij}P_j$ so $P_j K_{ij}$ is a subgroup. Evidently $P_j$ is normal in $K_{ij}$.
-Now by the second isomorphism theorem
+Now by the second isomorphism theorem[^second]
 $$ \frac{K_{ij}P_j}{P_j}\cong \frac{K_{ij}}{K_{ij}\cap P_j}$$
 so $|K_{ij}P_j| = |P_j||K_{ij}||K_{ij}\cap P_j|$. But every groups on the right hand side is a subgroup of a Sylow subgroup, so $K_{ij}P_j$ has $p$-power order. But $P_j \subseteq K_{ij}P_j$ and $P_j$ has maximal $p$-power order so $P_{ij} = K_{ij}P_j$ so $K_{ij} \subseteq P_j$.
 
@@ -192,3 +192,7 @@ It would be interesting to try to extend the orbit-decomposition argument that w
 [^irksome]: Perhaps I am too unkind to the lemma; its statement is perfectly pleasant and it is a good fact to know. However, the proof leaves something to be desired.
 
 [^same]: You will sometimes see versions of this argument which invoke the $p$-group fixed-point lemma, but they're really the same argument.
+
+[^second]: On the face of it, we are not invoking the second isomorphism as it is usually stated here: usually we have a group $G$, a subgroup $H$ and a subgroup $N$ which we *know* is normal. Then the theorem *concludes* that $NH$ is a subgroup and that $N$ is normal in $NH$. Here we instead strengthen the assumptions to include that $NH$ is a group and $N$ is normal in $NH$ and get the same result (by the same argument). Alternatively, we can in fact get our result by an application of the second isomorphism theorem as typically stated so long as we choose $N_G(P)$ as our "ambient" group. 
+
+[^fanciful]: Fancifully, we might say that Sylow subgroups are "unique mod $p$", or that the prime $p$ "thinks there is a unique Sylow subgroup".

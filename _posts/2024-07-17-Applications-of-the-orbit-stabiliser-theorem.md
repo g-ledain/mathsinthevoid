@@ -10,7 +10,7 @@ The orbit-stabiliser theorem is a theorem about group actions on sets but it rea
 # The conjugation action
 
 ## The action
-We have already seen how a group <span>$G$</span> acts on itself and on any collection of cosets <span>$G/H$</span> by left-multiplication - the action is transitive and has stabiliser <span>$H$</span>. There is another action of <span>$G$</span> on itself which always exists - the conjugation action. Specifically, we have any action
+We have already seen how a group <span>$G$</span> acts on itself and on any collection of cosets <span>$G/H$</span> by left-multiplication - the action is transitive and has stabiliser <span>$H$</span>. There is another action of <span>$G$</span> on itself which always exists - the conjugation action. Specifically, we have an action
 <div>$$ G\times G \to G $$</div>
 <div>$$ g.h := ghg^{-1}$$</div>
 This action has the advantage that conjugation is always an automorphism - so its "curried" form gives a map <span>$G \to \textrm{Hom}_{\textrm{Grp}}(G,G)$</span> rather than simply a map <span>$G \to \textrm{Hom}_{\textrm{Set}}(G,G)$</span> which one would normally have for a group action[^quotients]. 
@@ -60,7 +60,7 @@ The very smallest orbits contain the most "special" elements of <span>$X$</span>
 
 The largest orbits contain the most "generic" elements of <span>$X$</span> - in most real-life situations, especially geometrical ones, only a finite/discrete set have non-trivial stabilisers[^example]. Actions by finite groups tend to have larger stabilisers but the intuition is good to bear in mind.
 
-When <span>$G$</span> is a <span>$p$</span>-group[^definition], this decomposition is especially simple and powerful: the stabilisers are all powers of <span>$p$</span> and so we can image <span>$X$</span> as having a "filtration" by powers of <span>$p$</span> according to the size of the stabiliser.We can view the lower powers of <span>$p$</span> as being "leading terms" in a kind of power series expansion, and many arguments consist of comparing these leading terms[^adic]. 
+When <span>$G$</span> is a <span>$p$</span>-group[^definition], this decomposition is especially simple and powerful: the stabilisers are all powers of <span>$p$</span> and so we can image <span>$X$</span> as having a "filtration" by powers of <span>$p$</span> according to the size of the stabiliser. We can view the lower powers of <span>$p$</span> as being "leading terms" in a kind of power series expansion, and many arguments consist of comparing these leading terms[^adic]. 
 
 In this vein, we now come to possibly the most important application of the orbit-stabiliser theorem to finite group theory.
 
@@ -70,8 +70,9 @@ Let <span>$G$</span> be a finite <span>$p$</span>-group acting on a finite set <
 
 Proof:\
 We have 
-<div>$$X = \coprod_{\mathcal{O} \in \textrm{Orbit}(X)} \mathcal{O} = \textrm{Fix}(X) \coprod \left(\coprod_{\mathcal{O} \in \textrm{Orbit}(X)} \mathcal{O}\right)$$</div>
+<div>$$X = \coprod_{\mathcal{O} \in \textrm{Orbit}(X)} \mathcal{O} = \textrm{Fix}(X) \coprod \left(\coprod_{\mathcal{O} \in \textrm{Orbit}(X)\text{ nontrivial}} \mathcal{O}\right)$$</div>
 so
+<div>$$ |X| = \sum\limits_{\mathcal{O} \in \textrm{Orbit}(X)} |\mathcal{O}| = |\textrm{Fix}(X)| + \sum\left(\sum\limits_{\mathcal{O} \in \textrm{Orbit}(X)\text{ nontrivial}} |\mathcal{O}|\right) $$</div>
 But by the orbit stabiliser theorem <span>$|\mathcal{O}|$</span> divides <span>$|G|$</span>, so when <span>$|\mathcal{O}|>1$</span>, we have <span>$p$</span> divides <span>$|\mathcal{O}|$</span>.
 
 The same logic of splitting into trivial versus non-trivial orbits underlies a classic result called the "class equation".
@@ -114,7 +115,7 @@ So far we have applied the orbit-stabiliser theorem to groups whose order is div
  - (i) Cauchy's theorem states that if <span>$p$</span> divides <span>$|G|$</span>, then <span>$G$</span> has an element of order <span>$p$</span> (and hence a subgroup of order <span>$p$</span>)
   - (ii) At the other extreme, Sylow's (first) theorem states that if <span>$p^n$</span> is the largest power of <span>$p$</span> dividing <span>$|G|$</span>, then <span>$G$</span> has a subgroup of order <span>$p^n$</span>
   - (iii) In fact, for *any* prime power <span>$p^k$</span> dividing <span>$|G|$</span>, <span>$G$</span> has a subgroup of order <span>$p^k$</span>.[^incredible]
-In fact, we can already deduce (iii) conditionally on (ii): Suppose <span>$P$</span> has order <span>$p^n$</span>. We saw in a previous post that <span>$P$</span> is therefore solvable. Hence, it has a filtration <span>$\{e\}\subseteq P_1 \subseteq P_2 \subseteq \ldots P_{n-1} \subseteq P_n = P$</span> with <span>$P_k/P_{k-1} \cong C_p$</span>. Then <span>$P_k$</span> has order <span>$p^k$</span>. 
+In fact, we can already deduce (iii) conditionally on (ii): Suppose <span>$P$</span> has order <span>$p^n$</span>. We saw above that <span>$P$</span> is therefore solvable. Hence, it has a filtration <span>$\{e\}\subseteq P_1 \subseteq P_2 \subseteq \ldots P_{n-1} \subseteq P_n = P$</span> with <span>$P_k/P_{k-1} \cong C_p$</span>. Then <span>$P_k$</span> has order <span>$p^k$</span>. 
 
 *Theorem: Cauchy's theorem*\
 Let <span>$G$</span> be a finite group and suppose <span>$p$</span> divides <span>$|G|$</span>. Then <span>$G$</span> has an element of order <span>$p$</span>.
@@ -132,7 +133,7 @@ Now <span>$e\in \textrm{Fix}(X)$</span> so <span>$|\textrm{Fix}(X)| \geq p$</spa
 
 This argument is almost *too* slick to be easily understood. To get a better grasp on it, consider the case <span>$n=2$</span>; then the fibres of the map <span>$x\mapsto x^2$</span> partition <span>$G$</span> into self-inverse elements and element-inverse pairs. The identity element is always self-inverse, so when <span>$|G|$</span> is even, we then know that there has to be another self-inverse element i.e. an element of order <span>$2$</span>. The above proof should be seen as an adaptation of this strategy to deal with other primes.
 
-We can also give a less slick argument, which I prefer:#
+We can also give a less slick argument, which I prefer:
 
 Proof 2:\
 By induction on <span>$|G|$</span>[^hate]. \

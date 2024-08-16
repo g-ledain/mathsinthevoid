@@ -10,7 +10,7 @@ The orbit-stabiliser theorem is a theorem about group actions on sets but it rea
 # The conjugation action
 
 ## The action
-We have already seen how a group $G$ acts on itself and on any collection of cosets $G/H$ by left-multiplication - the action is transitive and has stabiliser $H$. There is another action of $G$ on itself which always exists - the conjugation action. Specifically, we have any action
+We have already seen how a group $G$ acts on itself and on any collection of cosets $G/H$ by left-multiplication - the action is transitive and has stabiliser $H$. There is another action of $G$ on itself which always exists - the conjugation action. Specifically, we have an action
 $$ G\times G \to G $$
 $$ g.h := ghg^{-1}$$
 This action has the advantage that conjugation is always an automorphism - so its "curried" form gives a map $G \to \textrm{Hom}_{\textrm{Grp}}(G,G)$ rather than simply a map $G \to \textrm{Hom}_{\textrm{Set}}(G,G)$ which one would normally have for a group action[^quotients]. 
@@ -55,7 +55,7 @@ The very smallest orbits contain the most "special" elements of $X$ - their stab
 
 The largest orbits contain the most "generic" elements of $X$ - in most real-life situations, especially geometrical ones, only a finite/discrete set have non-trivial stabilisers[^example]. Actions by finite groups tend to have larger stabilisers but the intuition is good to bear in mind.
 
-When $G$ is a $p$-group[^definition], this decomposition is especially simple and powerful: the stabilisers are all powers of $p$ and so we can image $X$ as having a "filtration" by powers of $p$ according to the size of the stabiliser.We can view the lower powers of $p$ as being "leading terms" in a kind of power series expansion, and many arguments consist of comparing these leading terms[^adic]. 
+When $G$ is a $p$-group[^definition], this decomposition is especially simple and powerful: the stabilisers are all powers of $p$ and so we can image $X$ as having a "filtration" by powers of $p$ according to the size of the stabiliser. We can view the lower powers of $p$ as being "leading terms" in a kind of power series expansion, and many arguments consist of comparing these leading terms[^adic]. 
 
 In this vein, we now come to possibly the most important application of the orbit-stabiliser theorem to finite group theory.
 
@@ -65,8 +65,9 @@ $$|X| \equiv |\textrm{Fix}(X)| \text{ mod } p$$
 
 Proof:\
 We have 
-$$X = \coprod_{\mathcal{O} \in \textrm{Orbit}(X)} \mathcal{O} = \textrm{Fix}(X) \coprod \left(\coprod_{\mathcal{O} \in \textrm{Orbit}(X)} \mathcal{O}\right)$$
+$$X = \coprod_{\mathcal{O} \in \textrm{Orbit}(X)} \mathcal{O} = \textrm{Fix}(X) \coprod \left(\coprod_{\mathcal{O} \in \textrm{Orbit}(X)\text{ nontrivial}} \mathcal{O}\right)$$
 so
+$$ |X| = \sum\limits_{\mathcal{O} \in \textrm{Orbit}(X)} |\mathcal{O}| = |\textrm{Fix}(X)| + \sum\left(\sum\limits_{\mathcal{O} \in \textrm{Orbit}(X)\text{ nontrivial}} |\mathcal{O}|\right) $$
 But by the orbit stabiliser theorem $|\mathcal{O}|$ divides $|G|$, so when $|\mathcal{O}|>1$, we have $p$ divides $|\mathcal{O}|$.
 
 The same logic of splitting into trivial versus non-trivial orbits underlies a classic result called the "class equation".
@@ -109,7 +110,7 @@ So far we have applied the orbit-stabiliser theorem to groups whose order is div
  - (i) Cauchy's theorem states that if $p$ divides $|G|$, then $G$ has an element of order $p$ (and hence a subgroup of order $p$)
   - (ii) At the other extreme, Sylow's (first) theorem states that if $p^n$ is the largest power of $p$ dividing $|G|$, then $G$ has a subgroup of order $p^n$
   - (iii) In fact, for *any* prime power $p^k$ dividing $|G|$, $G$ has a subgroup of order $p^k$.[^incredible]
-In fact, we can already deduce (iii) conditionally on (ii): Suppose $P$ has order $p^n$. We saw in a previous post that $P$ is therefore solvable. Hence, it has a filtration $\{e\}\subseteq P_1 \subseteq P_2 \subseteq \ldots P_{n-1} \subseteq P_n = P$ with $P_k/P_{k-1} \cong C_p$. Then $P_k$ has order $p^k$. 
+In fact, we can already deduce (iii) conditionally on (ii): Suppose $P$ has order $p^n$. We saw above that $P$ is therefore solvable. Hence, it has a filtration $\{e\}\subseteq P_1 \subseteq P_2 \subseteq \ldots P_{n-1} \subseteq P_n = P$ with $P_k/P_{k-1} \cong C_p$. Then $P_k$ has order $p^k$. 
 
 *Theorem: Cauchy's theorem*\
 Let $G$ be a finite group and suppose $p$ divides $|G|$. Then $G$ has an element of order $p$.
@@ -127,7 +128,7 @@ Now $e\in \textrm{Fix}(X)$ so $|\textrm{Fix}(X)| \geq p$ and any non-identity el
 
 This argument is almost *too* slick to be easily understood. To get a better grasp on it, consider the case $n=2$; then the fibres of the map $x\mapsto x^2$ partition $G$ into self-inverse elements and element-inverse pairs. The identity element is always self-inverse, so when $|G|$ is even, we then know that there has to be another self-inverse element i.e. an element of order $2$. The above proof should be seen as an adaptation of this strategy to deal with other primes.
 
-We can also give a less slick argument, which I prefer:#
+We can also give a less slick argument, which I prefer:
 
 Proof 2:\
 By induction on $|G|$[^hate]. \
