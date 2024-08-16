@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Categorical Aspects of Group Actions"
-date:   2023-07-22 00:00:00 +0100
+date:   2023-08-14 00:00:00 +0100
 categories: 
 ---
 
