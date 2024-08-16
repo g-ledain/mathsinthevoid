@@ -23,7 +23,7 @@ The counit of the above adjunction is a map $G\times X\to X$. How very conspicuo
 What's the deal with group actions then? Well here we have a rare instance where the algebra gives *exactly* the same data as was originally specified! This is a pleasant surprise, and almost a bit disconcerting - I would have expected the algebra to be some kind of "unbiased" version of a group action (not that I really know what such a thing would look like). I suspect that the equivalence given by monadicity is in this case actually an isomorphism. There are nice refinesments of Beck's monadicity theorem covering this situation but I don't know them in any great detail so I'll have to leave things there.
 
 # Homework
-What does the above story look like for modules? (After all, a module is a "just" linear version of a group action).
+What does the above story look like for modules? (After all, a module is a "just" linear version of a group action). Hint: enrich!
 
 
 [^uninteresting]: The unit $X \to G\times X$ is not nearly as interesting; it's just $x \mapsto (e,x)$.
