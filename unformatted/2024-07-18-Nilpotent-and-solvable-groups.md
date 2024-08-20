@@ -138,7 +138,7 @@ Suppose that $G$ is a nilpotent group. Then $G$ is solvable.
 (By series): Note that the derived series is contained at each stage in the lower central series. But the lower central series terminates in $\{1\}$, hence so does the derived series.\
 (By quotients): By definition of the composition factors of $G$ are Abelian.
 
-*Lemma: Subgroups and quotients of nilpotent and solvable groups*
+*Lemma: Subgroups and quotients of nilpotent and solvable groups*\
 Let $H \subseteq G$.
  - (i) If $G$ is solvable, then so is $H$
  - (ii) If $G$ is nilpotent, then so is $H$
