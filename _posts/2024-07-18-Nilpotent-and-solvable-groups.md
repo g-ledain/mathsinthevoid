@@ -136,9 +136,9 @@ Suppose that <span>$G$</span> is a nilpotent group. Then <span>$G$</span> is sol
 
 *Proof:*\
 (By series): Note that the derived series is contained at each stage in the lower central series. But the lower central series terminates in <span>$\{1\}$</span>, hence so does the derived series.\
-(By quotients): Since <span>$G$</span> is an iterated central extension of the Abelian group <span>$\{1\}$</span>, its composition factors each lie in the centre of some other group so are Abelian.
+(By quotients): By definition of the composition factors of <span>$G$</span> are Abelian.
 
-*Lemma: Subgroups and quotients of nilpotent and solvable groups*
+*Lemma: Subgroups and quotients of nilpotent and solvable groups*\
 Let <span>$H \subseteq G$</span>.
  - (i) If <span>$G$</span> is solvable, then so is <span>$H$</span>
  - (ii) If <span>$G$</span> is nilpotent, then so is <span>$H$</span>
