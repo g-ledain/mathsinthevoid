@@ -136,7 +136,7 @@ Suppose that $G$ is a nilpotent group. Then $G$ is solvable.
 
 *Proof:*\
 (By series): Note that the derived series is contained at each stage in the lower central series. But the lower central series terminates in $\{1\}$, hence so does the derived series.\
-(By quotients): Since $G$ is an iterated central extension of the Abelian group $\{1\}$, its composition factors each lie in the centre of some other group so are Abelian.
+(By quotients): By definition of the composition factors of $G$ are Abelian.
 
 *Lemma: Subgroups and quotients of nilpotent and solvable groups*
 Let $H \subseteq G$.
