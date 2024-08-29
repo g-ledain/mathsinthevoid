@@ -33,11 +33,11 @@ The key to understanding the analogy between Galois theory and covering theory i
 
 Let $p: \tilde{X} \to X$ be a covering map. A (continuous) map $f: X \to X$ is called a deck transformation of $p$ if $p=p \circ f$ i.e. if the figure 1a below commutes:
 
-![]({{ site.baseurl }}/assets/img/deck_transformation.png)
+![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/deck_transformation.png)
 
 *Fig 1a: A deck transformation*
 
-![]({{ site.baseurl }}/assets/img/field_automorphism.png)
+![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/field_automorphism.png)
 
 *Fig 1b: An automorphism of field extensions*
 
@@ -52,11 +52,11 @@ Slightly more general is the notion of a morphism of covering spaces, which corr
 
 Let $p: Y \to X$ and $q: Z \to X$ be covering maps. Then a morphism of covers from $Y$ to $Z$ is a covering map $f: Y \to Z$ such that the diagram figure 2b below commutes.
 
-![]({{ site.baseurl }}/assets/img/morphism_of_covering_spaces.png)
+![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/morphism_of_covering_spaces.png)
 
 *Fig 2a: A morphism of covering spaces*
 
-![]({{ site.baseurl }}/assets/img/field_extension_hom.png)
+![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/field_extension_hom.png)
 
 *Fig 2b: A homomorphism of K-extensions*
 
@@ -79,7 +79,7 @@ The equaliser of a set of maps is just the subset on which all of these maps tak
 (All the maps in the following are maps of $K$-extensions).
 Let $\phi: K\to L$ be a field extension and let $S \subseteq \text{Aut}(L\vert K)$. Then we say that $E \subseteq L$ is the equaliser of $S$ if $f_1 \circ i = f_2 \circ i$ for all $f_1,f_2 \in S$ and for any $K$-extension $M$ and any map $g\in \text{Hom}_K(M,L)$ such that $f_1 \circ g = f_2 \circ g$ for all $f_1,f_2 \in S$, then there exists a unique map $h: M \to E$ such that $i \circ h =g$ (where $i: K \hookrightarrow M$ is the inclusion map)
 
-![]({{ site.baseurl }}/assets/img/equaliser.png)
+![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/equaliser.png)
 
 *Fig 3a: The equaliser*
 
@@ -91,7 +91,7 @@ The analogy with covering spaces will always be made by reversing all the maps. 
 (All the maps in the following are covering maps).
 Let $p: Y\to X$ be a covering map and let $S \subseteq \text{Deck}(Y\vert X)$. Then we say that a pair $(Z,q_Z)$ where $q_Z: Y \to Z$ is the coequaliser of $S$ if $q_Z \circ f_1 = q_Z \circ f_2$ for all $f_1,f_2 \in S$ and for any cover $q_W: W \to X$ and any map of $X$-covers $g \in \text{Hom}_X(Y,W)$ such that $g \circ f_1 = g \circ f_2$ for all $f_1,f_2 \in S$, then there exists a unique map $h: Z \to W$ such that $h \circ q_Z =g$
 
-![]({{ site.baseurl }}/assets/img/co-equaliser.png)
+![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/co-equaliser.png)
 
 *Fig 3b: The co-equaliser*
 
@@ -113,7 +113,7 @@ It is now clear that the fixed points of an automorphism group are analogous to 
 Let $p: Y \to X$ be a covering map. We say that it is a regular cover if the coequaliser $Y/\text{Deck}(Y\vert X)$ is just $X$ itself (when $X$ is considered as a quotient space of $Y$ with quotient map $p$).
 Spelled out, this means the following: notice that if two points of $Y$ differ by a covering transformation of $p$, then $p$ takes the same value on them. So $p$ descends to a map $\overline{p}: Y/\text{Deck}(Y\vert X) \to X$. We say that $p$ is a regular cover if the map $\overline{p}$ is a homeomorphism.
 
-![]({{ site.baseurl }}/assets/img/regular_cover.png)
+![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/regular_cover.png)
 
 *Fig 4: A regular cover*
 
@@ -152,7 +152,7 @@ The universal cover $\tilde{X}$ of a space $X$ is a space is a covering space $q
 
 The space $\tilde{X}$ is indeed unique up to isomorphism - but the isomorphism itself is not unique unless $\pi_1(X,b)$ is trivial!
 
-![]({{ site.baseurl }}/assets/img/field_extension_hom.png)
+![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/field_extension_hom.png)
 
 *Fig 5a: The universal cover*
 
@@ -162,7 +162,7 @@ What about the field-theoretic analogue? A good guess would be the algebraic clo
 
 Let $K$ be a field. The separable closure $K^\text{sep}$ is a $K$-extension such that for any separable $K$-extension $L$, there exists a map of $K$-extensions $L \hookrightarrow K^\text{sep}$. One can show that $K^\text{sep}$ exists and is unique up to isomorphisms of $K$-extensions.
 
-![]({{ site.baseurl }}/assets/img/separable_closure.png)
+![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/separable_closure.png)
 
 *Fig 5b: The separable closure*
 
