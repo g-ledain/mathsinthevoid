@@ -1,18 +1,19 @@
 ---
 layout: post
 title:  "A User's Guide To Monoidal Category Coherence Theorems"
-date:   2024-08-24 00:00:00 +0100
+date:   2024-08-30 00:00:00 +0100
 categories: 
 ---
 
-# 
+# Introduction
 One of the perennial questions I find myself asking when learning category theory is "why those commutative diagrams? Why not more? Why not less?". When choosing which commutative diagrams to include in a definition, there are essentially two possible approaches: 
  - A "biased" definition using a logically minimal number of diagrams (hence which is "biased" in the sense that it gives a special role to these diagrams)
  - An "unbiased" versiom using a logically maximal number of diagrams - in particular which includes all diagrams which commute as a *formal* consequence of the diagrams in the biased definition
 
 Coherence theorems are (from one point of view) theorems which state an equivalence between a biased and an unbiased definition. Such theorems play more than one role:
  - Conceptual: Often, the biased form of the definition, while easy to establish, is not very conceptually motivating or enlightening. By providing an equivalent unbiased form, we gain a better understanding of what it is that the definition expresses
- - Practical: We may frequently want to establish whether a diagram
+ - Practical: We may frequently want to establish whether a diagram commutes, and in particular if it commutes for purely formal reasons. Coherence theorems allow us to recognise a large class of commutative diagrams with minimal effort
+ 
 It is the second reason which primarily concerns us here, and as such we will focus mostly on the practical use of the coherence theorems rather than their precise statement, and proofs will be absent.
 
 In a concrete sense, coherence theorems (especially for monoidal categories) take the form[^alternative] of a concrete description of the *free (braided/symmetric) monoidal category* on a set[^morphisms] of objects[^usual]. If we understand which diagrams commute in these free monoidal category, then their image in an arbitrary monoidal category $\mathcal{C}$ gives a large class of commuting diagrams in $\mathcal{C}$ for free.

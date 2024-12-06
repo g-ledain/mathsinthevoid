@@ -40,6 +40,9 @@ We say that the functor $F$ is "strong colax" or just "costrong" if $\phi_{x,y},
 
 Note that $(F,\phi,i)$ is strong exactly when $(F, \phi^{-1},i^{-1})$ is costrong.
 
+*Definition: (Co)Lax monoidal natural transformation*
+TODO: DEFINITION HERE
+
 The definition of monoidal category we have been considering so far imposes no relationship between $x\otimes y$ and $y\otimes x$. Unlike in the case of "monoidal sets" (i.e. monoids), commutativity of monoidal categories comes in two different strengths[^higher-monoidal]: "braided" and "symmetric".
 
 *Definition: Braided monoidal category, Symmetric monoidal category*\
@@ -49,6 +52,11 @@ Since symmetry is a *property* of a braided monoidal category, rather than being
 From now on suppose that $\mathcal{C}$ is a braided lax monoidal category with braiding $\gamma$.
 
 *Definition: Braided lax monoidal functor, Braided colax monoidal functor*\
+Let $\mathcal{C},\mathcal{D}$ be braided monoidal categories. A lax monoidal functor $F: \mathcal{C}\to\mathcal{D}$ is said to be **braided** if the following diagram commutes:
+TO DO: DIAGRAM
+
+A colax such functor $F$ is said to be braided if the following diagram commutes:
+TO DO: DIAGRAM
 
 The relationship between $x\otimes y$ and $y\otimes x$ in braided monoidal categories allows us to express a compatibility condition between a lax and a colax structure on a functor, giving rise to the notion of a "bilax" monoidal functor. Note that this functor *need not neccesarily be braided lax/braided colax*. If it is both braided lax and braided colax, then it is said to be *braided bilax*. This is an unusual case where extra structure on objects (here categories) can induce classes of morphism between those objects which don't "respect" the object structure in the conventional sense.
 
@@ -59,13 +67,17 @@ We say a functor is strong bilax if the lax and colax structures are both strong
 We say a functor is braided bilax if the lax and colax structures are both braided.
 
 *Definition: Braided lax monoidal natural transformation, Braided colax monoidal natural transformation*\
+These are just natural transformations of the underlying (co)lax monoidal functors.
+
+When $F,G$ are colax monoidal, a colax monoidal natural transformation $\alpha: F\Rightarrow G$ is said to be braided if CONDITION
+
+When $F,G$ are bilax, a natural transformation $F\ Rightarrow G$ is said to be bilax monoidal if it is both lax monoidal and colax monoidal.
 
 *Definition: Bilax monoidal natural transformation*\
 
 
-
-
 # Monoidal categories and adjunctions
+
 
 [^2-theory]: There is an entire theory of 2-monads, largely due to Kelley, which formalises the resulting structure. Much of what we will discuss above is subsumed by this theory. See, for instance [here]{https://ncatlab.org/nlab/show/doctrine} and [here]{https://ncatlab.org/nlab/show/doctrinal+adjunction} as starting points
 
