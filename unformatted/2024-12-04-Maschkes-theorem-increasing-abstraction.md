@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Maschke's theorem at increasing levels of generality"
-date:   2023-06-26 00:00:00 +0100
+date:   2024-12-04 00:00:00 +0100
 categories: 
 ---
 
