@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Maschke's theorem at increasing levels of generality"
+title:  "Maschke's theorem at increasing levels of abstraction"
 date:   2024-12-04 00:00:00 +0100
 categories: 
 ---
