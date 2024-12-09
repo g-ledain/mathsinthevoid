@@ -105,7 +105,7 @@ This proof presented above largely remains the same as the previously presented 
 One can surely take all of this much further - I imagine there are rather general settings in which this argument can be made to work (that $\textrm{Hom}(V,W)^G$ comprise the maps of $G$-reps feels the most "non-categorical" part of the argument as presented here), and there are (co)homological techniques and interpretations of the semisimplicity of various categories of representations. But I do not know them nearly well enough to blog about them.
 
 # A small aside
-Note that the functors $i$ and $\pi$ of course have the very nice property that $\pi \circ i = \textrm{Id}_{textrm{inv}}$. Consequently, $\pi^v$ always splits $i^V$ so the invariants $V^G$ always have direct complement in $V$, namely $V = V^G\oplus \textrm{ker}(\pi^V) $. You will notice, however, that this fact is not in any way necessary for all of the above arguments - you will only see $i$ and $\pi$ composed in the order $i^V \circ \pi^V$. This tickles me.
+Note that the functors $i$ and $\pi$ of course have the very nice property that $\pi \circ i = \textrm{Id}_{\textrm{inv}}$. Consequently, $\pi^v$ always splits $i^V$ so the invariants $V^G$ always have direct complement in $V$, namely $V = V^G\oplus \textrm{ker}(\pi^V) $. You will notice, however, that this fact is not in any way necessary for all of the above arguments - you will only see $i$ and $\pi$ composed in the order $i^V \circ \pi^V$. This tickles me.
 
 
 [^ambient]: All the hom-sets here are to be understood as hom-sets in the category of vector spaces
