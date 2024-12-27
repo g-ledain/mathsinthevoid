@@ -16,17 +16,13 @@ def leadingContainsNewline(myString: str)-> bool:
 
 def trailingContainsNewline(myString: str) -> bool:
     return leadingContainsNewline(myString[::-1])
-        
 
-thisDir = os.path.dirname(os.path.realpath(__file__))
-files = [f for f in os.listdir(os.path.join(thisDir,"unformatted")) if os.path.isfile(os.path.join(thisDir,"unformatted",f))]
-for file in files:
-    with open(os.path.join(thisDir,"unformatted",file),"r") as rawFile:
-        rawFileText = rawFile.read()
+
+def format(markdownString: str):
     latexRegex = r"(?<!\\)\$\$|(?<!\\)\$"#matches text between single or double dollar signs, but doesn't match \$
     #see https://stackoverflow.com/questions/35004800/regex-match-a-dollar-without-a-backslash-before-it
-    dollars=re.findall(latexRegex,rawFileText)
-    body=re.split(latexRegex,rawFileText)
+    dollars=re.findall(latexRegex,markdownString)
+    body=re.split(latexRegex,markdownString)
     parsed=body[0]
     for i in range(len(dollars)):
         dollarPart=dollars[i]
@@ -54,7 +50,39 @@ for file in files:
             parsed+="</"+tag+">"
             parsed+=newLine
         parsed+=bodyPart
+
+    return parsed
         
-    with open(os.path.join(thisDir,"_posts",file),"w") as parsedFile:
-        parsedFile.write(parsed)
-        parsedFile.close()
+
+def getFiles(path: str) -> list[str]:
+    return [f for f in os.listdir(path) if os.path.isfile(os.path.join(path,f))]        
+
+def getSubdirectories(path: str) -> list[str]:
+    return [d for d in os.listdir(path) if os.path.isdir(os.path.join(path,d))]     
+
+thisDir = os.path.dirname(os.path.realpath(__file__))
+files = [f for f in os.listdir(os.path.join(thisDir,"unformatted")) if os.path.isfile(os.path.join(thisDir,"unformatted",f))]
+directories = getSubdirectories(os.path.join(thisDir,"unformatted"))
+
+for dir in directories:
+    if dir == "published":
+        files = getFiles(os.path.join(thisDir,"unformatted", dir))
+        for file in files:
+            with open(os.path.join(thisDir,"unformatted",dir,file),"r") as rawFile:
+                rawFileText = rawFile.read()
+                formatted = format(rawFileText)
+                
+            with open(os.path.join(thisDir,"_posts",file),"w") as formattedFile:
+                formattedFile.write(formatted)
+                formattedFile.close()
+
+    if dir == "drafts":
+        files = getFiles(os.path.join(thisDir,"unformatted", dir))
+        for file in files:
+            with open(os.path.join(thisDir,"unformatted",dir,file),"r") as rawFile:
+                rawFileText = rawFile.read()
+                formatted = format(rawFileText)
+                
+            with open(os.path.join(thisDir,"_drafts",file),"w") as formattedFile:
+                formattedFile.write(formatted)
+                formattedFile.close()
