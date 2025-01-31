@@ -2,6 +2,12 @@ import re
 import os
 import subprocess
 
+def getFiles(path: str) -> list[str]:
+    return [f for f in os.listdir(path) if os.path.isfile(os.path.join(path,f))]        
+
+def getSubdirectories(path: str) -> list[str]:
+    return [d for d in os.listdir(path) if os.path.isdir(os.path.join(path,d))]     
+
 def leadingContainsNewline(myString: str)-> bool:
     newString = myString
     if newString == "":
@@ -53,41 +59,27 @@ def format(markdownString: str):
         parsed+=bodyPart
 
     return parsed
+
+def formatPosts(root: str, dir: str):
+    unformattedSubdir = os.path.join(root,"unformatted", dir)
+    files = getFiles(unformattedSubdir)
+    for file in files:
+        with open(os.path.join(unformattedSubdir,file),"r") as rawFile:
+            rawFileText = rawFile.read()
+            formattedFileText = format(rawFileText)
+        
+        formattedPath = os.path.join(root,"_posts",file)
+        with open(formattedPath,"w") as formattedFile:
+            formattedFile.write(formattedFileText)
+            formattedFile.close()
+            subprocess.run("git add "+ formattedPath)
         
 
-def getFiles(path: str) -> list[str]:
-    return [f for f in os.listdir(path) if os.path.isfile(os.path.join(path,f))]        
-
-def getSubdirectories(path: str) -> list[str]:
-    return [d for d in os.listdir(path) if os.path.isdir(os.path.join(path,d))]     
-
 thisDir = os.path.dirname(os.path.realpath(__file__))
-files = [f for f in os.listdir(os.path.join(thisDir,"unformatted")) if os.path.isfile(os.path.join(thisDir,"unformatted",f))]
+files = getFiles(os.path.join(thisDir,"unformatted"))
 directories = getSubdirectories(os.path.join(thisDir,"unformatted"))
 
-for dir in directories:
-    if dir == "published":
-        files = getFiles(os.path.join(thisDir,"unformatted", dir))
-        for file in files:
-            with open(os.path.join(thisDir,"unformatted",dir,file),"r") as rawFile:
-                rawFileText = rawFile.read()
-                formatted = format(rawFileText)
-            
-            formattedPath = os.path.join(thisDir,"_posts",file)
-            with open(formattedPath,"w") as formattedFile:
-                formattedFile.write(formatted)
-                formattedFile.close()
-                subprocess.run("git add "+ formattedPath)
 
-    if dir == "drafts":
-        files = getFiles(os.path.join(thisDir,"unformatted", dir))
-        for file in files:
-            with open(os.path.join(thisDir,"unformatted",dir,file),"r") as rawFile:
-                rawFileText = rawFile.read()
-                formatted = format(rawFileText)
-            
-            formattedPath = os.path.join(thisDir,"_drafts",file)
-            with open(formattedPath,"w") as formattedFile:
-                formattedFile.write(formatted)
-                formattedFile.close()
-                subprocess.run("git add "+ formattedPath)
+for dir in directories:
+    if dir in ["published", "drafts"]
+    formatPosts(thisDir, dir)
