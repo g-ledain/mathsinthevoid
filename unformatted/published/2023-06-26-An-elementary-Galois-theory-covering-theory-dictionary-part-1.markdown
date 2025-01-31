@@ -4,7 +4,6 @@ title:  "An elementary Galois theory-covering theory dictionary (part 1)"
 date:   2023-06-26 00:00:00 +0100
 categories: 
 ---
-Test
 There is a deep analogy between Galois theory and the theory of covering spaces. Understanding and making formal the details of this analogy requires the sophisticated language and machinery of scheme theory. However, it is possible to state the basic ideas of the analogy in an entirely elementary fashion, needing no knowledge beyond a first course in Galois theory and a first course on the fundamental group. This is what I want to do here.
 
 (Note: throughout we will be assuming that our topological spaces are nice enough that we can apply the Galois correspondence for covering spaces. Specifically, they need to be path-connected, locally path-connected and semi-locally simply connected. You can consider topological manifolds or CW-complexes instead if you wish.)
