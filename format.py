@@ -81,5 +81,5 @@ directories = getSubdirectories(os.path.join(thisDir,"unformatted"))
 
 
 for dir in directories:
-    if dir in ["published", "drafts"]
-    formatPosts(thisDir, dir)
+    if dir in ["published", "drafts"]:
+        formatPosts(thisDir, dir)
