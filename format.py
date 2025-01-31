@@ -1,5 +1,6 @@
 import re
 import os
+import subprocess
 
 def leadingContainsNewline(myString: str)-> bool:
     newString = myString
@@ -71,10 +72,12 @@ for dir in directories:
             with open(os.path.join(thisDir,"unformatted",dir,file),"r") as rawFile:
                 rawFileText = rawFile.read()
                 formatted = format(rawFileText)
-                
-            with open(os.path.join(thisDir,"_posts",file),"w") as formattedFile:
+            
+            formattedPath = os.path.join(thisDir,"_posts",file)
+            with open(formattedPath,"w") as formattedFile:
                 formattedFile.write(formatted)
                 formattedFile.close()
+                subprocess.run("git add "+ formattedPath)
 
     if dir == "drafts":
         files = getFiles(os.path.join(thisDir,"unformatted", dir))
@@ -82,7 +85,9 @@ for dir in directories:
             with open(os.path.join(thisDir,"unformatted",dir,file),"r") as rawFile:
                 rawFileText = rawFile.read()
                 formatted = format(rawFileText)
-                
-            with open(os.path.join(thisDir,"_drafts",file),"w") as formattedFile:
+            
+            formattedPath = os.path.join(thisDir,"_drafts",file)
+            with open(formattedPath,"w") as formattedFile:
                 formattedFile.write(formatted)
                 formattedFile.close()
+                subprocess.run("git add "+ formattedPath)
