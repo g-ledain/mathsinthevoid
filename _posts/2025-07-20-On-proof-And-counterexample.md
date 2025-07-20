@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "On Proof and counterexample"
+title:  "On proof and counterexample"
 date:   2025-07-20 00:00:00 +0100
 categories: 
 ---
