@@ -175,8 +175,8 @@ It would be interesting to try to extend the orbit-decomposition argument that w
 
 
 # Sources/further reading
- - The final proofs of Sylow II and III are taken from <ARMSTRONG>
- - The last proof of Sylow I and the first proofs of Sylow II and III are taken from <Qchu>, which contains several more proofs of the Sylow theorems and some interesting historical comments
+ - The final proofs of Sylow II and III are taken from M.A Armstrong's textbook "Groups and Symmetry"
+ - The last proof of Sylow I and the first proofs of Sylow II and III are taken from the blog [Annoying Precision](https://qchu.wordpress.com/2020/11/01/meditation-on-the-sylow-theorems-i/), which contains several more proofs of the Sylow theorems and some interesting historical comments
  - The first proof of Sylow I is from the Wikipedia article on the Sylow theorems.
 
 --- 
