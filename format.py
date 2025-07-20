@@ -68,11 +68,15 @@ def formatPosts(root: str, dir: str):
             rawFileText = rawFile.read()
             formattedFileText = format(rawFileText)
         
-        formattedPath = os.path.join(root,"_posts",file)
+        if dir == "published":
+            formattedPath = os.path.join(root,"_posts",file)
+        if dir == "drafts":
+            formattedPath = os.path.join(root,"_drafts",file)
+
         with open(formattedPath,"w") as formattedFile:
             formattedFile.write(formattedFileText)
             formattedFile.close()
-            subprocess.run("git add "+ formattedPath)
+            subprocess.run(["git","add", formattedPath])
         
 
 thisDir = os.path.dirname(os.path.realpath(__file__))
