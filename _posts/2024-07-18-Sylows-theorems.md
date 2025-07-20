@@ -8,17 +8,21 @@ categories:
 I never remembered, let alone understood, the proofs of Sylow's theorems (even consistently stating the third one correctly gave me trouble). On the one hand, looking up several different proofs has let me pick and choose which ones I like the best. On the other hand, finding their commonalities has helped me identify the crucial parts of the arguments.
 
 # Sylow I
+*Theorem: Sylow I*\
+Let <span>$G$</span> be a finite group and <span>$n$</span> be the largest integer such that <span>$p^n$</span> divides <span>$|G|$</span>.
+Then for any <span>$0 \leq k \leq n$</span>, there exists a subgroup <span>$P$</span> of <span>$G$</span> with order <span>$p^k$</span>.
+
 Most of the proofs of Sylow I we present here will be souped-up versions of the arguments we used to prove Cauchy's theorem, with the exception of the final proof which iteratively uses Cauchy's theorem to construct subgroups of order <span>$p,p^2,\ldots,p^n$</span>.
 
-We call a subgroup <span>$P$</span> of <span>$G$</span> of order <span>$p$</span> a <span>$p$</span>-Sylow subgroup, or just a Sylow subgroup for short. Throughout, we will use <span>$n_p$</span> to refer to the number of <span>$p$</span>-Sylow subgroups of <span>$G$</span>.
+We call a subgroup <span>$P$</span> of <span>$G$</span> of order <span>$p^n$</span> a <span>$p$</span>-Sylow subgroup, or just a Sylow subgroup for short. Throughout, we will use <span>$n_p$</span> to refer to the number of <span>$p$</span>-Sylow subgroups of <span>$G$</span>.
 
-Throughout, we will be referring to the largest power of a prime <span>$p$</span> which divides an integer <span>$n$</span>, and it will be helpful to fix some notation for this.
+Throughout, we will be referring to the largest power of a prime <span>$p$</span> which divides an integer <span>$m$</span>, and it will be helpful to fix some notation for this.
 
 *Definition: <span>$p$</span>-adic valuation:*\
 Fix a prime <span>$p$</span>. We write 
 <div>$$v_p: \mathbb{Z} \to \mathbb{Z}\cup \{\infty\} $$</div>
-<div>$$v_p(x) = \begin{cases} \text{The largest power of } p \text{ which divides } n & \text{ if } n\neq 0 \\ \infty & \text{ if } n=0 \end{cases} $$</div>
-We call <span>$v_p(n)$</span> the <span>$p$</span>-adic valuation of <span>$n$</span>.
+<div>$$v_p(x) = \begin{cases} \text{The largest power of } p \text{ which divides } x & \text{ if } x\neq 0 \\ \infty & \text{ if } x=0 \end{cases} $$</div>
+We call <span>$v_p(x)$</span> the <span>$p$</span>-adic valuation of <span>$x$</span>.
 
 Our first argument will be a counting argument using group actions. To glue things together, we will need a lemma to relate <span>$p$</span>-divisibility to counting.
 
@@ -34,7 +38,7 @@ where <span>$G$</span> acts by left-multiplication. We have
 <div>$$v_p(|X|)=\binom{p^nu}{p^k} $$</div>
 so 
 <div>$$v_p(|X|)= n-k=: r $$</div>
-For any <span>$S\in X$</span> and <span>$a\in S$</span>, we ahve <span>$G_S.a\subseteq S$</span>, so
+For any <span>$S\in X$</span> and <span>$a\in S$</span>, we have <span>$G_S.a\subseteq S$</span>, so
 <div>$$|G_S|=|G_S.a| \leq |S| = p^k $$</div>
 so <span>$v_p(|G_S|)\leq k$</span> hence by orbit-stabiliser <span>$v_p(|G.S|) \geq r$</span>. We have 
 <div>$$|G| = \sum_{G-\text{ orbits } \mathcal{O} \text{ of } X} |\mathcal{O}|$$</div>
@@ -57,8 +61,8 @@ for some <span>$0\leq t_i'\leq t_i$</span> and then
 has order <span>$p^k$</span>.
 
 **Case <span>$G$</span> is non-Abelian:**
-If <span>$p$</span> divides <span>$|Z(G)|$</span>, then write <span>$|Z(G)|=p^ru'$</span> where <span>$p\not | u'$</span>. Since <span>$G$</span> is non-Abelian we have <span>$|Z(G)|<|G|$</span> and since <span>$p$</span> divides <span>$|Z(G)$</span> we have <span>$|G/Z(G)|<|G|$</span>. By the inductive hypothesis^[^abelian] there exists a subgroup <span>$A\subseteq Z(G)$</span> of order <span>$p^r$</span> and since 
-<div>$$k-r\leq n-r = v_p(|G/A?) $$</div>
+If <span>$p$</span> divides <span>$|Z(G)|$</span>, then write <span>$|Z(G)|=p^ru'$</span> where <span>$p\not | u'$</span>. Since <span>$G$</span> is non-Abelian we have <span>$|Z(G)|<|G|$</span> and since <span>$p$</span> divides <span>$|Z(G)$</span> we have <span>$|G/Z(G)|<|G|$</span>. By the inductive hypothesis[^abelian] there exists a subgroup <span>$A\subseteq Z(G)|$</span> of order <span>$p^r$</span> and since 
+<div>$$k-r\leq n-r = v_p(|G/A|) $$</div>
 there exists by the inductive hypothesis a subgroup <span>$\tilde{P} = P/A \subseteq G/A$</span> of order <span>$p^{k-r}$</span>.
 Now 
 <div>$$|P| = |\tilde{P}||A| = p^{k-r}p^r = p^k $$</div>

@@ -8,17 +8,21 @@ categories:
 I never remembered, let alone understood, the proofs of Sylow's theorems (even consistently stating the third one correctly gave me trouble). On the one hand, looking up several different proofs has let me pick and choose which ones I like the best. On the other hand, finding their commonalities has helped me identify the crucial parts of the arguments.
 
 # Sylow I
+*Theorem: Sylow I*\
+Let $G$ be a finite group and $n$ be the largest integer such that $p^n$ divides $|G|$.
+Then for any $0 \leq k \leq n$, there exists a subgroup $P$ of $G$ with order $p^k$.
+
 Most of the proofs of Sylow I we present here will be souped-up versions of the arguments we used to prove Cauchy's theorem, with the exception of the final proof which iteratively uses Cauchy's theorem to construct subgroups of order $p,p^2,\ldots,p^n$.
 
-We call a subgroup $P$ of $G$ of order $p$ a $p$-Sylow subgroup, or just a Sylow subgroup for short. Throughout, we will use $n_p$ to refer to the number of $p$-Sylow subgroups of $G$.
+We call a subgroup $P$ of $G$ of order $p^n$ a $p$-Sylow subgroup, or just a Sylow subgroup for short. Throughout, we will use $n_p$ to refer to the number of $p$-Sylow subgroups of $G$.
 
-Throughout, we will be referring to the largest power of a prime $p$ which divides an integer $n$, and it will be helpful to fix some notation for this.
+Throughout, we will be referring to the largest power of a prime $p$ which divides an integer $m$, and it will be helpful to fix some notation for this.
 
 *Definition: $p$-adic valuation:*\
 Fix a prime $p$. We write 
 $$v_p: \mathbb{Z} \to \mathbb{Z}\cup \{\infty\} $$
-$$v_p(x) = \begin{cases} \text{The largest power of } p \text{ which divides } n & \text{ if } n\neq 0 \\ \infty & \text{ if } n=0 \end{cases} $$
-We call $v_p(n)$ the $p$-adic valuation of $n$.
+$$v_p(x) = \begin{cases} \text{The largest power of } p \text{ which divides } x & \text{ if } x\neq 0 \\ \infty & \text{ if } x=0 \end{cases} $$
+We call $v_p(x)$ the $p$-adic valuation of $x$.
 
 Our first argument will be a counting argument using group actions. To glue things together, we will need a lemma to relate $p$-divisibility to counting.
 
@@ -34,7 +38,7 @@ where $G$ acts by left-multiplication. We have
 $$v_p(|X|)=\binom{p^nu}{p^k} $$
 so 
 $$v_p(|X|)= n-k=: r $$
-For any $S\in X$ and $a\in S$, we ahve $G_S.a\subseteq S$, so
+For any $S\in X$ and $a\in S$, we have $G_S.a\subseteq S$, so
 $$|G_S|=|G_S.a| \leq |S| = p^k $$
 so $v_p(|G_S|)\leq k$ hence by orbit-stabiliser $v_p(|G.S|) \geq r$. We have 
 $$|G| = \sum_{G-\text{ orbits } \mathcal{O} \text{ of } X} |\mathcal{O}|$$
@@ -57,8 +61,8 @@ $$\langle g_i^{t_1-t_1'},\ldots, g_i^{t_N-t_N'} \rangle \subseteq G$$
 has order $p^k$.
 
 **Case $G$ is non-Abelian:**
-If $p$ divides $|Z(G)|$, then write $|Z(G)|=p^ru'$ where $p\not | u'$. Since $G$ is non-Abelian we have $|Z(G)|<|G|$ and since $p$ divides $|Z(G)$ we have $|G/Z(G)|<|G|$. By the inductive hypothesis^[^abelian] there exists a subgroup $A\subseteq Z(G)$ of order $p^r$ and since 
-$$k-r\leq n-r = v_p(|G/A?) $$
+If $p$ divides $|Z(G)|$, then write $|Z(G)|=p^ru'$ where $p\not | u'$. Since $G$ is non-Abelian we have $|Z(G)|<|G|$ and since $p$ divides $|Z(G)$ we have $|G/Z(G)|<|G|$. By the inductive hypothesis[^abelian] there exists a subgroup $A\subseteq Z(G)|$ of order $p^r$ and since 
+$$k-r\leq n-r = v_p(|G/A|) $$
 there exists by the inductive hypothesis a subgroup $\tilde{P} = P/A \subseteq G/A$ of order $p^{k-r}$.
 Now 
 $$|P| = |\tilde{P}||A| = p^{k-r}p^r = p^k $$
