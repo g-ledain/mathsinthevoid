@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Categorical Aspects of Group Actions"
+title:  "Categorical aspects of group actions"
 date:   2024-08-14 00:00:00 +0100
 categories: 
 ---
