@@ -175,6 +175,8 @@ It would be interesting to try to extend the orbit-decomposition argument that w
  - The last proof of Sylow I and the first proofs of Sylow II and III are taken from <Qchu>, which contains several more proofs of the Sylow theorems and some interesting historical comments
  - The first proof of Sylow I is from the Wikipedia article on the Sylow theorems.
 
+--- 
+
 [^trivial]: In fact, in the paradigm case of Sylow I, namely subgroups of order $p^n$, this bound is trivial, so the proof simplifies significantly. 
 
 [^abelian]: Or just by the Abelian case

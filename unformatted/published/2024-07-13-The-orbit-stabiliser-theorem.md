@@ -74,6 +74,8 @@ Now note that $g.x = h.x$ iff $gh^{-1}\in \textrm{Stab}(x)$. (In fact, *every* q
 
 Thus, the orbit-stabiliser theorem is exactly Lagrange's theorem "pushed through" the map $\rho_x$.
 
+---
+
 This formulation of the theorem has a very nice eye-catching moral: Note that a $G$-set $X$ is always the disjoint union of its orbits, so we can understand the action of $G$ on $X$ by understanding the action of $G$ on each of the orbits separately. But by orbit-stabiliser, each orbit is isomorphic as a $G$-set to the left-multiplication action of $G$ on $G/H$ for some $H\leq G$. So the category of $G$-sets can be understood completely by understanding how $G$ acts on itself![^overstatement].
 
 Note that a similar moral holds for linear $G$-representations, especially in the semisimple case (e.g. when $G$ is finite and the ground field $k$ is algebraically closed of characteristic zero); in this case, every representation is a direct sum (not disjoint union) of simples (not orbits) and every simple $G$-representation appears as a quotient (and summand, by semisimplicity) of $kG$. In fact, a nice perspective on semisimplicity might be that it allows us to emulate as closely as possible the case of $G$ acting on a mere set, rather than a vector space.

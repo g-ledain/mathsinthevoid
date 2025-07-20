@@ -146,7 +146,7 @@ In fact, in both the Abelian and non-Abelian case, one is making use of the dual
 
 Next time we'll look at some proofs of Sylow's theorems, many of which are souped-up versions of the above proofs.
 
-
+---
 
 [^quotients]: Similarly to the left-multiplication action of $G$ on the cosets $G/H$, one can have a conjugation action of $G$ on $G/H$ but it is only well-defined when $H$ is a normal subgroup of $G$ - thus, it is also an action of $G$ on  the group $G/H$ by group automorphisms. 
 

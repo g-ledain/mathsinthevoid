@@ -25,5 +25,6 @@ What's the deal with group actions then? Well here we have a rare instance where
 # Homework
 What does the above story look like for modules? (After all, a module is a "just" linear version of a group action). Hint: enrich!
 
+--- 
 
 [^uninteresting]: The unit <span>$X \to G\times X$</span> is not nearly as interesting; it's just <span>$x \mapsto (e,x)$</span>.

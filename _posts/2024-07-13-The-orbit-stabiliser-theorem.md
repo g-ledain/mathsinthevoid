@@ -74,6 +74,8 @@ Now note that <span>$g.x = h.x$</span> iff <span>$gh^{-1}\in \textrm{Stab}(x)$</
 
 Thus, the orbit-stabiliser theorem is exactly Lagrange's theorem "pushed through" the map <span>$\rho_x$</span>.
 
+---
+
 This formulation of the theorem has a very nice eye-catching moral: Note that a <span>$G$</span>-set <span>$X$</span> is always the disjoint union of its orbits, so we can understand the action of <span>$G$</span> on <span>$X$</span> by understanding the action of <span>$G$</span> on each of the orbits separately. But by orbit-stabiliser, each orbit is isomorphic as a <span>$G$</span>-set to the left-multiplication action of <span>$G$</span> on <span>$G/H$</span> for some <span>$H\leq G$</span>. So the category of <span>$G$</span>-sets can be understood completely by understanding how <span>$G$</span> acts on itself![^overstatement].
 
 Note that a similar moral holds for linear <span>$G$</span>-representations, especially in the semisimple case (e.g. when <span>$G$</span> is finite and the ground field <span>$k$</span> is algebraically closed of characteristic zero); in this case, every representation is a direct sum (not disjoint union) of simples (not orbits) and every simple <span>$G$</span>-representation appears as a quotient (and summand, by semisimplicity) of <span>$kG$</span>. In fact, a nice perspective on semisimplicity might be that it allows us to emulate as closely as possible the case of <span>$G$</span> acting on a mere set, rather than a vector space.

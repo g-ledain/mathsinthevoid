@@ -107,6 +107,7 @@ One can surely take all of this much further - I imagine there are rather genera
 # A small aside
 Note that the functors <span>$i$</span> and <span>$\pi$</span> of course have the very nice property that <span>$\pi \circ i = \textrm{Id}_{\textrm{inv}}$</span>. Consequently, <span>$\pi^v$</span> always splits <span>$i^V$</span> so the invariants <span>$V^G$</span> always have direct complement in <span>$V$</span>, namely <span>$V = V^G\oplus \textrm{ker}(\pi^V) $</span>. You will notice, however, that this fact is not in any way necessary for all of the above arguments - you will only see <span>$i$</span> and <span>$\pi$</span> composed in the order <span>$i^V \circ \pi^V$</span>. This tickles me.
 
+---
 
 [^ambient]: All the hom-sets here are to be understood as hom-sets in the category of vector spaces
 [^lie-algebras]: I first saw this proof during a course on the Lie algebras. The lecturer reassured us that the proof should be familiar because it was essentially the "same proof" as the one we knew from the representation theory of finite groups. This was quite confusing, as the proofs superficially look pretty different. This post is in essense me working my way backwards to understand how the proof looks for finite groups [^difference]

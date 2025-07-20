@@ -159,6 +159,8 @@ A finite group is nilpotent exactly if it is a direct product of <span>$p$</span
 
 *Proof*: I haven't studied a proof of this in any detail, but [this](https://dept.math.lsa.umich.edu/~speyer/594/B_594_W_22_worksheets.pdf) [^archived] seems like a fun guided exercise.
 
+---
+
 [^lie]: Actually, I was exposed to the definition of nilpotence and most of these propositions in the context of Lie algebras first, but I think it's nicer to learn about them in the context of groups. 
 
 [^normal]: For practical purposes, if we are using definition (i) we need only verify that each <span>$A_i$</span> is normal in <span>$A_{i+1}$</span> since the centrality condition then *implies* that <span>$A_i$</span> is normal in <span>$G$</span>. However, for the purposes of stating the definition this would simply be an inductive headache.
