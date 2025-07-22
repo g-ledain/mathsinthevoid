@@ -29,8 +29,7 @@ The reversing of the arrows makes this correspondence 'contravariant'. For insta
 
 The key to understanding the analogy between Galois theory and covering theory is to understand the group of deck transformations of a cover, and how it relates to the fundamental group. From here, the rest of the correspondence largely follows by 'reversing the arrows'.
 
-*Definition: Deck transformation*
-
+*Definition: Deck transformation*\
 Let <span>$p: \tilde{X} \to X$</span> be a covering map. A (continuous) map <span>$f: X \to X$</span> is called a deck transformation of <span>$p$</span> if <span>$p=p \circ f$</span> i.e. if the figure 1a below commutes:
 
 ![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/deck_transformation.png)
@@ -48,8 +47,7 @@ Compare this to a homomorphism of field extensions: for a homomorphism of field 
 
 Slightly more general is the notion of a morphism of covering spaces, which corresponds to the idea of a homomorphism of field extensions.
 
-*Definition: Morphism of covers*
-
+*Definition: Morphism of covers*\
 Let <span>$p: Y \to X$</span> and <span>$q: Z \to X$</span> be covering maps. Then a morphism of covers from <span>$Y$</span> to <span>$Z$</span> is a covering map <span>$f: Y \to Z$</span> such that the diagram figure 2b below commutes.
 
 ![]({{ site.baseurl }}/assets/img/galois-theory-covering-spaces/morphism_of_covering_spaces.png)
@@ -64,8 +62,7 @@ Let <span>$p: Y \to X$</span> and <span>$q: Z \to X$</span> be covering maps. Th
 
 The first thing we need to do to understand an analogy with Galois theory is to understand what the analogous concept to a Galois extension is. Recall the definition:
 
-*Definition: Galois extension*
-
+*Definition: Galois extension*\
 We say that a homormophism <span>$\phi: K \to L$</span> of fields is a Galois extension if <span>$L^{\text{Aut}_K(L)}=K$</span>, where <span>$L^{\text{Aut}_K(L)}$</span> denotes the fixed points of <span>$L$</span> under the action of <span>$\text{Aut}_K(L)$</span>. 
 
 Another way to formulate this is as follows:
@@ -74,8 +71,7 @@ Another way to formulate this is as follows:
 
 The equaliser of a set of maps is just the subset on which all of these maps take the same values. This is equivalent to the usual definition via fixed points because the identity map is of course contained in <span>$\text{Aut}(L\vert K)$</span>. We can further refine our understanding of Galois extensions by phrasing it in more category-theoretic terms. 
 
-*Definition: Equaliser*
-
+*Definition: Equaliser*\
 (All the maps in the following are maps of <span>$K$</span>-extensions).
 Let <span>$\phi: K\to L$</span> be a field extension and let <span>$S \subseteq \text{Aut}(L\vert K)$</span>. Then we say that <span>$E \subseteq L$</span> is the equaliser of <span>$S$</span> if <span>$f_1 \circ i = f_2 \circ i$</span> for all <span>$f_1,f_2 \in S$</span> and for any <span>$K$</span>-extension <span>$M$</span> and any map <span>$g\in \text{Hom}_K(M,L)$</span> such that <span>$f_1 \circ g = f_2 \circ g$</span> for all <span>$f_1,f_2 \in S$</span>, then there exists a unique map <span>$h: M \to E$</span> such that <span>$i \circ h =g$</span> (where <span>$i: K \hookrightarrow M$</span> is the inclusion map)
 
@@ -97,19 +93,19 @@ Let <span>$p: Y\to X$</span> be a covering map and let <span>$S \subseteq \text{
 
 It is easy to check that <span>$q_Z$</span> is in fact a quotient map, so <span>$Z$</span> may be thought of as a quotient space of <span>$Y$</span>.
 
-*Proposition:*
-
+*Proposition:*\
 Let <span>$p:Y \to X$</span> be a covering space and <span>$S$</span> be a set of covering maps <span>$Y \to Y$</span>. Let <span>$\sim$</span> be the smallest equivalence relation on <span>$X$</span> such that <span>$f_1(x) \sim f_2(x)$</span> for all <span>$ f_1,f_2 \in S$</span>. Then <span>$Y/\sim$</span> is a coequaliser of <span>$S$</span>.
 Moreover, for any coequaliser <span>$(C,q_c)$</span> of <span>$S$</span>, the map <span>$q_c$</span> is a quotient map, and the quotient <span>$C$</span> by the relation <span>$x \sim y \Leftrightarrow q_c(x)=q_c(y)$</span> equals <span>$Y/\sim$</span>
-Proof: This is an essentially categorical argument.
+
+*Proof:*\
+This is an essentially categorical argument.
 Consider <span>$W,g$</span> as in the definition of coequaliser. Since <span>$g\circ f_1 = g\circ f_2$</span> for all <span>$f_1,f_2 \in S$</span>, we have <span>$g(x)=g(y)$</span> if <span>$x\sim y$</span> and so by a well-known fact about quotient spaces there is a unique continuous map <span>$h: Y/\sim \to W$</span> such that <span>$g = h\circ \pi$</span>, where <span>$\pi$</span> is the quotient map.
 
 For the second part, note that the above argument gives us a map <span>$h_1: Y/\sim \to C$</span>. But the definition of the coequaliser gives us a map <span>$h_2: C \to Y\sim$</span>. But note that the maps <span>$\text{id}_{Y/\sim}, \text{id}_C$</span> also satisfy the properties listed in the definition of the coequaliser so by uniqueness we have <span>$h_1\circ h_2 = \text{id}_C$</span> and <span>$h_2\circ h_1 = \text{id}_{Y/\sim}$</span>, so <span>$Y/\sim \cong C$</span>. One can check that this isomorphism turns <span>$\pi$</span> into <span>$q_C$</span> by a similar argument.
 
 It is now clear that the fixed points of an automorphism group are analogous to the coequaliser of the set of Deck transformations. We will denote this coequaliser by <span>$Y/\text{Deck}(Y\vert X)$</span>. This lets us formulate the analogous concept to a Galois extension:
 
-*Definition: Regular cover*
-
+*Definition: Regular cover*\
 Let <span>$p: Y \to X$</span> be a covering map. We say that it is a regular cover if the coequaliser <span>$Y/\text{Deck}(Y\vert X)$</span> is just <span>$X$</span> itself (when <span>$X$</span> is considered as a quotient space of <span>$Y$</span> with quotient map <span>$p$</span>).
 Spelled out, this means the following: notice that if two points of <span>$Y$</span> differ by a covering transformation of <span>$p$</span>, then <span>$p$</span> takes the same value on them. So <span>$p$</span> descends to a map <span>$\overline{p}: Y/\text{Deck}(Y\vert X) \to X$</span>. We say that <span>$p$</span> is a regular cover if the map <span>$\overline{p}$</span> is a homeomorphism.
 
@@ -129,16 +125,17 @@ One the face of it, it's plausible that these two definitions should be equivale
 
 *Proposition: The two definitions of regular cover are equivalent*
 
-Sketch proof: Two points <span>$y_1,u_2 \in Y$</span> satisfy <span>$y_1=f(y_2)$</span> for some <span>$f\in S$</span> if and only if <span>$y_1 = y_2$</span> in <span>$Y/\text{Deck}(Y|X)$</span>. This shows that <span>$\overline{p}$</span> is a bijection. It is not hard to show that it is a bijection.
+*Sketch proof:*\
+ Two points <span>$y_1,u_2 \in Y$</span> satisfy <span>$y_1=f(y_2)$</span> for some <span>$f\in S$</span> if and only if <span>$y_1 = y_2$</span> in <span>$Y/\text{Deck}(Y|X)$</span>. This shows that <span>$\overline{p}$</span> is a bijection. It is not hard to show that it is a homemorphism.
 
-The fundamental group and the absolute Galois group
+# The fundamental group and the absolute Galois group
 
 We now have an understanding of how Galois extensions of fields relate to covering maps. However, the Galois correspondence for covering spaces is usually expressed in terms of the fundamental group. So we need to understand how the fundamental group relates to deck transformations.
 
-*Theorem:*
-
+*Theorem:*\
 Let <span>$(X,b)$</span> be a (pointed) topological space and let <span>$p: (\tilde{X},\tilde{b}) \to (X,b)$</span> be the universal cover. Then <span>$\pi_1(X,b)$</span> is isomorphic to the group <span>$\text{Deck}(\tilde{X}|X)$</span>.
-Sketch proof:
+
+*Sketch proof:*\
 Let <span>$\ell$</span> be a path in <span>$X$</span> based at <span>$b$</span>. This lifts to a path <span>$\tilde{\ell}$</span> in <span>$\tilde{X}$</span> starting at <span>$\tilde{b}$</span>. Recall that the universal cover of a space is in fact a regular cover, so there exists a covering transformation <span>$f_\ell$</span>. Note that by definition, this transformation <span>$f_ell$</span> is a lift of the map <span>$p$</span> and recall that if two lifts of the same map agree at a point, they agree everywhere. Thus the map <span>$f$</span> is unique. So we may define an isomorphism 
 <span>$\pi_1(X,b) \to \text{Deck}(\tilde{X}|X)$</span>
 <span>$[\ell] \mapsto f_\ell$</span>
@@ -146,8 +143,7 @@ It is now easy to check that this map is injective, surjective and indeed a homo
 
 What is the fundamental group analogous to in Galois theory? To answer that, we need to find an analogous object to the universal cover, and then take the Galois group of that object. The universal cover of a space <span>$X$</span> can be thought of as the 'largest' connected space which covers <span>$X$</span>. So the analogous concept is the largest separable extension into which a field <span>$K$</span> embeds. The following definitions make this idea more precise.
 
-*Definition: Universal cover*
-
+*Definition: Universal cover*\
 The universal cover <span>$\tilde{X}$</span> of a space <span>$X$</span> is a space is a covering space <span>$q_1: \tilde{X} \to X$</span> such that for every covering space <span>$q_2: Y \to X$</span> there exists a covering map <span>$q_3: \tilde{X} \to Y$</span> such that <span>$q_2 \circ q_3 = q_1$</span>. 
 
 The space <span>$\tilde{X}$</span> is indeed unique up to isomorphism - but the isomorphism itself is not unique unless <span>$\pi_1(X,b)$</span> is trivial!
@@ -178,8 +174,7 @@ One could do Galois theory in a similar way to covering space theory, by embeddi
 
 At long last, we come to the Galois correspondence. First, we state the field-theoretic Galois correspondence.
 
-*Theorem: The fundamental theorem of Galois theory*
-
+*Theorem: The fundamental theorem of Galois theory*\
 Let <span>$K \hookrightarrow L$</span> be a finite separable field extension. Let <span>$G=\text{Gal}(L\vert K)$</span> and <span>$H=\text{Gal}(L\vert M)$</span> Then:
  - (i) There is an inclusion-reversing bijection: 
  <div>$$ \{\text{intermediate fields } K \subseteq M \subseteq L\} \leftrightarrow \{\text{subgroups } H \subseteq \text{Gal}(L\vert K)\} $$</div> 
@@ -195,8 +190,7 @@ Let <span>$K \hookrightarrow L$</span> be a finite separable field extension. Le
 
 It is worth taking some time to try to write down for yourself what the corresponding theorem for covering spaces is. We will state it now:
 
-*Theorem: The Galois correspondence (covering spaces)*
-
+*Theorem: The Galois correspondence (covering spaces)*\
 Let <span>$p: \tilde{X} \to X$</span> be a finite regular cover and <span>$b \in X$</span>. Let <span>$G=\text{Deck}(\tilde{X},X)$</span> and <span>$H=\text{Gal}(L\vert M)$</span> Then:
  - (i) There is a bijection:
 <div>$$\{\text{intermediate covers } \tilde{X} \to Y \to X\} \leftrightarrow \{\text{subgroups } H \subseteq \text{Gal}(\tilde{X}|X)\}$$</div>
